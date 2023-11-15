@@ -21,10 +21,10 @@ typedef FormatHandler FormatMatch;
 
 int _putchar(char c);
 int _printf(const char *format, ...);
-int print_c_fmt(va_list char_ap); /* for printing characters */
-int print_s_fmt(va_list strn_ap); /* for printing strings */
-int _strnlen(char *strn); /* will be used for getting the length of strings*/
-int print_mod_fmt(void); /* for printing the % sign */
+int print_c_fmt(va_list char_ap);
+int print_s_fmt(va_list strn_ap);
+int _strnlen(char *strn);
+int print_mod_fmt(void);
 
 
 #endif
