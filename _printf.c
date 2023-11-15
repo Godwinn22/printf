@@ -38,6 +38,7 @@ int _printf(const char *format, ...)
 			{
 				len += forms[j].functptr(ap);
 				i += 2;
+				break;
 			}
 			j++;
 		}
