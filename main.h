@@ -25,6 +25,8 @@ int print_c_fmt(va_list char_ap);
 int print_s_fmt(va_list strn_ap);
 int _strnlen(char *strn);
 int print_mod_fmt(void);
+int print_d_fmt(va_list dec_ap);
+int print_i_fmt(va_list int_ap);
 
 
 #endif

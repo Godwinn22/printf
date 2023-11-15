@@ -10,7 +10,9 @@ int _printf(const char *format, ...)
 	FormatMatch forms[] = {
 		{"%c", print_c_fmt},
 		{"%s", print_s_fmt},
-		{"%%", print_mod_fmt}
+		{"%%", print_mod_fmt},
+		{"%d", print_d_fmt},
+		{"%i", print_i_fmt}
 	};
 
 	int i = 0;
@@ -29,7 +31,7 @@ int _printf(const char *format, ...)
 	while (format[i] != '\0')
 	{
 		j = 0;
-		while (j < 3)
+		while (j < 5)
 		{
 			if (forms[j].sn[0] == format[i] && forms[j].sn[1] == format[i + 1])
 			{
