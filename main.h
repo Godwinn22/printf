@@ -28,6 +28,6 @@ int _strnlen2(const char *strn);
 int print_mod_fmt(void);
 int print_d_fmt(va_list dec_ap);
 int print_i_fmt(va_list int_ap);
-
+int print_binary(va_list bin_ap);
 
 #endif

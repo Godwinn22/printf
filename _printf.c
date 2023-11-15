@@ -12,7 +12,8 @@ int _printf(const char *format, ...)
 		{"%s", print_s_fmt},
 		{"%%", print_mod_fmt},
 		{"%d", print_d_fmt},
-		{"%i", print_i_fmt}
+		{"%i", print_i_fmt},
+		{"%b", print_binary}
 	};
 
 	int i = 0;
@@ -30,8 +31,8 @@ int _printf(const char *format, ...)
 
 	while (format[i] != '\0')
 	{
-		j = 0;
-		while (j < 5)
+		j = 5;
+		while (j >= 0)
 		{
 			if (forms[j].sn[0] == format[i] && forms[j].sn[1] == format[i + 1])
 			{
@@ -39,7 +40,7 @@ int _printf(const char *format, ...)
 				i += 2;
 				break;
 			}
-			j++;
+			j--;
 		}
 		_putchar(format[i]);
 		i++;
