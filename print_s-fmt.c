@@ -14,7 +14,7 @@ int print_s_fmt(va_list strn_ap)
 	strn = va_arg(strn_ap, char *);
 	if (strn == NULL)
 	{
-		strn = "(null)";
+		strn = "(nil)";
 		strn_len = _strnlen(strn);
 		for (i = 0; i < strn_len; i++)
 		{
