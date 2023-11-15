@@ -7,7 +7,7 @@
 */
 int print_binary(va_list bin_ap)
 {
-	int char_cont = 0;
+	int char_count = 0;
 	int flag = 0;
 	int bit_index;
 	int mask = 1;
@@ -27,13 +27,13 @@ int print_binary(va_list bin_ap)
 		{
 			b = p >> (31 - bit_index);
 			_putchar(b + 48);
-			char_cont++;
+			char_count++;
 		}
 	}
-	if (char_cont == 0)
+	if (char_count == 0)
 	{
-		char_cont++;
+		char_count++;
 		_putchar('0');
 	}
-	return (char_cont);
+	return (char_count);
 }

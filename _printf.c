@@ -31,16 +31,15 @@ int _printf(const char *format, ...)
 
 	while (format[i] != '\0')
 	{
-		j = 5;
-		while (j >= 0)
+		j = 0;
+		while (j < 6)
 		{
 			if (forms[j].sn[0] == format[i] && forms[j].sn[1] == format[i + 1])
 			{
 				len += forms[j].functptr(ap);
 				i += 2;
-				break;
 			}
-			j--;
+			j++;
 		}
 		_putchar(format[i]);
 		i++;
