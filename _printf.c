@@ -28,8 +28,8 @@ int _printf(const char *format, ...)
 
 	while (format[i] != '\0')
 	{
-		j = 2;
-		while (j >= 0)
+		j = 0;
+		while (j < 3)
 		{
 			if (forms[j].sn[0] == format[i] && forms[j].sn[1] == format[i + 1])
 			{
@@ -37,7 +37,7 @@ int _printf(const char *format, ...)
 				i += 2;
 				break;
 			}
-			j--;
+			j++;
 		}
 		_putchar(format[i]);
 		i++;
