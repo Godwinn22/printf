@@ -21,7 +21,7 @@ int print_i_fmt(va_list int_ap)
 	{
 		_putchar(45);
 		n1 = -n1;
-		var_ints = -last_int;
+		var_ints = -var_ints;
 		last_int = -last_int;
 		i++;
 	}
