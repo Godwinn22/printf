@@ -10,8 +10,7 @@ int _printf(const char *format, ...)
 	FormatMatch forms[] = {
 		{"%c", print_c_fmt},
 		{"%s", print_s_fmt},
-		{"%%", print_mod_fmt},
-		{"%d", }
+		{"%%", print_mod_fmt}
 	};
 
 	int i = 0;
